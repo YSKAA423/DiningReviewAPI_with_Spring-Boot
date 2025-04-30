@@ -1,0 +1,49 @@
+# Ignore build output directory
+target/
+
+# Ignore Maven specific files
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# Keep the Maven wrapper jar (needed for ./mvnw)
+!/.mvn/wrapper/maven-wrapper.jar
+
+# Ignore common IDE specific files
+.idea/          # IntelliJ IDEA
+*.iml           # IntelliJ IDEA module files
+*.ipr           # IntelliJ IDEA project files
+*.iws           # IntelliJ IDEA workspace files
+.classpath      # Eclipse/STS
+.project        # Eclipse/STS
+.settings/      # Eclipse/STS
+.apt_generated  # STS
+.factorypath    # STS
+.springBeans   # STS
+.sts4-cache     # STS
+/nbproject/private/ # NetBeans
+/nbbuild/       # NetBeans
+/dist/          # NetBeans
+/nbdist/        # NetBeans
+/.nb-gradle/    # NetBeans
+.vscode/        # VS Code
+
+# Ignore OS generated files
+.DS_Store       # macOS
+.localized      # macOS
+Thumbs.db       # Windows
+
+# Ignore H2 Database files (local database data)
+*.mv.db
+*.trace
+
+# Ignore the default HELP.md file if you are using your own README
+HELP.md
+
+# Ensure README.md is NOT ignored (usually not necessary as .md is not typically ignored)
+!README.md
