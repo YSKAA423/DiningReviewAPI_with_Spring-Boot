@@ -120,61 +120,29 @@ cd allergy-review-api
 
 ## 🧪 Testing with cURL
 
-### Create a New User
-
+#### Create a New User:
 ```bash
-curl -X POST http://localhost:8080/users \
-  -H "Content-Type: application/json" \
-  -d '{
-        "userName": "john_doe",
-        "city": "Dubai",
-        "state": "DU",
-        "zipCode": "12345",
-        "isInterestedInDairyAllergies": true,
-        "isInterestedInPeanutAllergies": false,
-        "isInterestedInEggAllergies": true
-      }'
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{"userName": "john_doe", "city": "Dubai", "state": "DU", "zipCode": "12345", "isInterestedInDairyAllergies": true, "isInterestedInPeanutAllergies": false, "isInterestedInEggAllergies": true}'
 ```
 
-### Create a New Restaurant
-
+#### Create a New Restaurant:
 ```bash
-curl -X POST http://localhost:8080/restaurant \
-  -H "Content-Type: application/json" \
-  -d '{
-        "name": "Allergy-Free Diner",
-        "zipCode": "12345"
-      }'
+curl -X POST http://localhost:8080/restaurant -H "Content-Type: application/json" -d '{"name": "Allergy-Free Diner", "zipCode": "12345"}'
 ```
 
-### Submit a Dining Review
-
+#### Submit a Dining Review:
 ```bash
-curl -X POST http://localhost:8080/dining_review \
-  -H "Content-Type: application/json" \
-  -d '{
-        "userName": "john_doe",
-        "restaurantId": 1,
-        "peanutScore": 4,
-        "eggScore": 5,
-        "dairyScore": 3
-      }'
+curl -X POST http://localhost:8080/dining_review -H "Content-Type: application/json" -d '{"userName": "john_doe", "restaurantId": 1, "peanutScore": 4, "eggScore": 5, "dairyScore": 3}'
 ```
 
-### Admin: Get Pending Reviews
-
+#### Admin: Get Pending Reviews:
 ```bash
 curl http://localhost:8080/admin/reviews?status=pending
 ```
 
-### Admin: Accept a Review
-
+#### Admin: Accept a Review:
 ```bash
-curl -X PUT http://localhost:8080/admin/reviews/1 \
-  -H "Content-Type: application/json" \
-  -d '{
-        "acceptDiningReview": true
-      }'
+curl -X PUT http://localhost:8080/admin/reviews/1 -H "Content-Type: application/json" -d '{"acceptDiningReview": true}'
 ```
 
 ---
